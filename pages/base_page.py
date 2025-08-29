@@ -10,5 +10,5 @@ class BasePage():
     def click(self, locator):
         self.wait.until(expected_conditions.element_to_be_clickable(locator)).click()
     
-    def send_keys(self, locator, text):
+    def type(self, locator, text):
         self.wait.until(expected_conditions.visibility_of_element_located(locator)).send_keys(text) 
