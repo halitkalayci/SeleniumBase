@@ -12,3 +12,6 @@ class BasePage():
     
     def type(self, locator, text):
         self.wait.until(expected_conditions.visibility_of_element_located(locator)).send_keys(text) 
+    
+    def get_text(self,locator):
+        return self.wait.until(expected_conditions.visibility_of_element_located(locator)).text
